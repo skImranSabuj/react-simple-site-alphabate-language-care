@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const useCourses = () => {
     const courses = [{
         "id": "lan101",
-        "course_name": "Tiebout",
+        "course_name": "Learn Bangla",
         "isntructor": "Tiebout Etchells",
         "fee": "$4024.60",
         "start_date": "12/23/2020",
