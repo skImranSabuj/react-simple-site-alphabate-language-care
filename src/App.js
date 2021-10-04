@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
-import OrderReview from './components/OrderReview/OrderReview';
+import OrderReview from './components/Courses/Courses';
 import About from './components/About/About';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 
