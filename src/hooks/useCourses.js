@@ -1,108 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect } from "react";
+import { useState } from "react"
 
 const useCourses = () => {
-    const courses = [{
-        "id": "lan101",
-        "course_name": "Learn Bangla",
-        "isntructor": "Tiebout Etchells",
-        "fee": "$4024.60",
-        "start_date": "12/23/2020",
-        "duration": 1,
-        "language": "Bangla",
-        "img": "https://www.filose.com/site/wp-content/uploads/2020/10/bengali-calligraphy.png"
-    },
-    {
-        "id": "lan102",
-        "course_name": "Master Papiamento",
-        "isntructor": "Barry Silversmid",
-        "fee": "$3037.12",
-        "start_date": "1/25/2021",
-        "duration": 6,
-        "language": "Papiamento",
-        "img": "https://st3.depositphotos.com/10100458/31659/v/600/depositphotos_316596352-stock-illustration-bon-bini-learn-how-one.jpg"
-    },
-    {
-        "id": "lan103",
-        "course_name": "Learn Hindi",
-        "isntructor": "Rad Hartas",
-        "fee": "$3743.33",
-        "start_date": "12/15/2020",
-        "duration": 3,
-        "language": "Hindi",
-        "img": "https://www.pursueit.ae/public/uploads/activity-feature-image/thumb/500351617795885.jpg"
-    },
-    {
-        "id": "lan110",
-        "course_name": "Basic English",
-        "isntructor": "Druci Baddow",
-        "fee": "$4004.69",
-        "start_date": "10/21/2020",
-        "duration": 2,
-        "language": "English",
-        "img": "https://belmonttech.net/wp-content/uploads/2018/04/Learn-1024x1024.png"
-    },
-    {
-        "id": "lan205",
-        "course_name": "Introduction to Tamil",
-        "isntructor": "Rowan Tonnesen",
-        "fee": "$3821.15",
-        "start_date": "1/7/2021",
-        "duration": 3,
-        "language": "Tamil",
-        "img": "https://static.panthi.lk/addImages/1576054301_learn-tamil-language-easily-and-quickly.jpg"
-    },
-    {
-        "id": "lan201",
-        "course_name": "Clemmy",
-        "isntructor": "Clemmy Dampier",
-        "fee": "$1697.26",
-        "start_date": "4/15/2021",
-        "duration": 6,
-        "language": "Kazakh",
-        "img": "https://happydays365.org/wp-content/uploads/2021/05/Months-of-the-Year-in-Kazakh-1.png"
-    },
-    {
-        "id": "lan202",
-        "course_name": "Learn Amharic",
-        "isntructor": "Gabriel Tuhy",
-        "fee": "$3503.23",
-        "start_date": "2/21/2021",
-        "duration": 6,
-        "language": "Amharic",
-        "img": "https://www.ethiopiaonlinevisa.com/wp-content/uploads/sites/31/2021/09/amharic-ethiopian-language-1280x720.jpg"
-    },
-    {
-        "id": "lan301",
-        "course_name": "Charlean",
-        "isntructor": "Charlean Privost",
-        "fee": "$4565.51",
-        "start_date": "11/3/2020",
-        "duration": 3,
-        "language": "Dhivehi",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJfBTIY0StTsUhjtICYMdWW2WHuy3Y3IdyEQ&usqp=CAU"
-    },
-    {
-        "id": "lan220",
-        "course_name": "Basic Quechua",
-        "isntructor": "Carley Hobble",
-        "fee": "$4371.39",
-        "start_date": "10/6/2020",
-        "duration": 4,
-        "language": "Quechua",
-        "img": "https://content.wdl.org/13751/thumbnail/1430181639/616x510.jpg"
-    },
-    {
-        "id": "lan400",
-        "course_name": "Elementary Yiddish",
-        "isntructor": "Alan Martijn",
-        "fee": "$500.00",
-        "start_date": "12/8/2020",
-        "duration": 5,
-        "language": "Yiddish",
-        "img": "https://image.shutterstock.com/image-vector/jigsaw-puzzle-concept-yiddish-language-600w-1241454790.jpg"
-    }]
-    // console.log('C:', courses)
-    return [courses];
+    const [courses, setCourses] = useState([]);
+    useEffect(() => {
+        fetch('./products.JSON')
+            .then(res => res.json())
+            .then(data => setCourses(data))
+    }, [])
+    return [courses, setCourses];
 };
-
 export default useCourses;
