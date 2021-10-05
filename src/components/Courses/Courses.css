@@ -1,6 +1,7 @@
-.shop-container{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+.all-course{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 10px;
 }
 .product-container{
     border-right: 1px solid lightgray;

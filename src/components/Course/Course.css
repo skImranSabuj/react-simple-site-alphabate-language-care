@@ -1,15 +1,20 @@
 .Course{
-    display: flex;
-    border-bottom: 1px solid lightgray;
+    /* background-color:rgba(104, 35, 160, 0.027); */
+    display: grid;
+    grid-template-columns: 1.7fr 2.3fr;
+    border: 2px solid rgb(46, 46, 46);
+    border-left: 7px solid rgb(46, 46, 46);
     margin-right: 5px;
     padding-bottom: 5px;
+    border-radius: 10px;
+    box-shadow:0px 3px 3px 0px rgba(46, 46, 46, 0.589)
 }
-.product-name{
-    color: blue;
-    font-weight: 400;
+.course-name{
+    color: black;
+    font-weight: 600;
 }
 .btn-regular{
-    background-color: rgba(104, 35, 160, 0.781);
+    border: 2px solid grey;
     width: 150px;
     height: 25px;
     border: 1px solid gray;
@@ -21,5 +26,11 @@
     color: gold;
 }
 .thumbnail{
-    width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.course-details{
+padding: 10px 10px 10px 20px;
 }

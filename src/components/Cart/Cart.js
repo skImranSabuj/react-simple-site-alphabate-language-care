@@ -20,14 +20,17 @@ const Cart = (props) => {
     const tax = (total + shipping) * 0.10;
     const grandTotal = total + shipping + tax;
     return (
-        <div>
-            <h3>Your DashBoard</h3>
-            <h5>Course Enrolled: {totalQuantity}</h5>
-            <br />
-            <p>Total: {total.toFixed(2)}</p>
-            <p>tax: {tax.toFixed(2)}</p>
-            <p>Grand Total: {grandTotal.toFixed(2)}</p>
-            {props.children}
+        <div className="cart">
+            <div className="innet">
+                <img className="w-75 mx-auto" src="https://www.kindpng.com/picc/m/235-2350708_login-icon-download-clipart-hd-png-download.png" alt="" />
+                <h3>Your DashBoard</h3>
+                <h5>Course Enrolled: {totalQuantity}</h5>
+                <br />
+                <p>Total: {total.toFixed(2)}</p>
+                <p>tax: {tax.toFixed(2)}</p>
+                <p>Grand Total: {grandTotal.toFixed(2)}</p>
+                {props.children}
+            </div>
         </div>
 
     );

@@ -1,0 +1,10 @@
+.icons img{
+width: 50px;
+border-radius: 50%;
+padding: 10px;
+}
+.icons img:hover{
+width: 50px;
+border-radius: 50%;
+padding: 8px;
+}

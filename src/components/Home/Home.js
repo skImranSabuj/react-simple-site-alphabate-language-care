@@ -13,22 +13,8 @@ const Home = () => {
     const [cart, setCart] = useCart(courses);
     const history = useHistory();
 
-    const handleAddToCart = (course) => {
-        const exists = cart.find(pd => pd.id === course.id);
-        console.log(exists);
-        let newCart = [];
-        if (exists) {
-            const rest = cart.filter(pd => pd.id !== course.id);
-            course['quantity'] += 1;
-            newCart = [...rest, course];
-        }
-        else {
-            course['quantity'] = 1;
-            newCart = [...cart, course];
-        }
-        setCart(newCart);
-        // console.log('new cart:', cart)
-        addToDb(courses.id);
+    const handleEnrollement = () => {
+        history.push('/singlecourse')
     }
     const handlecheckOut = () => {
         history.push('/orders')
@@ -36,22 +22,23 @@ const Home = () => {
 
 
     return (
-        <div className="shop-container">
+        <div className="home-container pb-3">
+            <div className="cart-container">
+                <Cart cart={cart}>
+                    <button onClick={handlecheckOut} className="btn btn-dark">Check out</button>
+                </Cart>
+            </div>
             <div className="course-container">
                 {
                     topCourses.map(course => <Course
                         id={course.id}
                         course={course}
-                        handleAddToCart={handleAddToCart}
+                        handleEnrollement={handleEnrollement}
                     >
                     </Course>)
                 }
             </div>
-            <div className="cart-container">
-                <Cart cart={cart}>
-                    <button onClick={handlecheckOut} className="btn btn-primary">Check out</button>
-                </Cart>
-            </div>
+
         </div>
     );
 };

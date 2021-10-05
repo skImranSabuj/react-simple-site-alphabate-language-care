@@ -1,0 +1,12 @@
+.cart{
+    background-color: rgba(247, 244, 244, 0.479);
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    display: flex;
+    justify-content: center
+}
+.innet{
+    text-align: center
+}

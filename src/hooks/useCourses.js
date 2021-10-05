@@ -9,7 +9,7 @@ const useCourses = () => {
         "start_date": "12/23/2020",
         "duration": 1,
         "language": "Bangla",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWsME9El71D_aMNocU4FJYLjaX1Aq4A5iSzw&usqp=CAU"
+        "img": "https://www.filose.com/site/wp-content/uploads/2020/10/bengali-calligraphy.png"
     },
     {
         "id": "lan102",
@@ -33,13 +33,13 @@ const useCourses = () => {
     },
     {
         "id": "lan110",
-        "course_name": "Basic Enlish",
+        "course_name": "Basic English",
         "isntructor": "Druci Baddow",
         "fee": "$4004.69",
         "start_date": "10/21/2020",
         "duration": 2,
         "language": "English",
-        "img": "https://media.istockphoto.com/vectors/english-vector-id1047570732?k=20&m=1047570732&s=612x612&w=0&h=fcgzlrNrq_hws1ykrLSpyBVZoIGr54EUueD6WAEVW0c="
+        "img": "https://belmonttech.net/wp-content/uploads/2018/04/Learn-1024x1024.png"
     },
     {
         "id": "lan205",
